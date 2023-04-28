@@ -17,3 +17,10 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.rick{
+	max-width: 80px;
+	height: 10vh;
+	margin: 0 auto;
+	padding: 2rem 0;
+  }

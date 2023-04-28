@@ -8,9 +8,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Inicio from './componentes/Inicio'
 import Personaje from './componentes/Personaje'
 import './index.css';
-import { useParams } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import New from "./componentes/New";
 
 const App = () => {
 
@@ -43,24 +40,12 @@ const App = () => {
     localStorage.setItem('mostrarCompletadas', mostrarCompletadas.toString());
   }, [mostrarCompletadas]);
 
-  
   const handleClick = () => {
-    window.location.replace('http://localhost:3000/NEW');
+    window.location.replace('https://mi-sitio-web.com/');
   };
-
   return (
     <div className="contenedor">
-        <Header 
-          mostrarCompletadas={mostrarCompletadas} 
-          cambiarMostrarCompletadas={cambiarMostrarCompletadas}
-        />  
-        <FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas}/>
-        <ListaTareas 
-          tareas={tareas} 
-          cambiarTareas={cambiarTareas}
-          mostrarCompletadas={mostrarCompletadas}
-         />
-         
+        
          <BrowserRouter>
           <Routes>
             <Route path='/' element={<Inicio></Inicio>}></Route>
@@ -68,8 +53,7 @@ const App = () => {
           </Routes>
          </BrowserRouter>
     </div>
-    
-    
+
   );
 }
 
