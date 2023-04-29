@@ -13,8 +13,8 @@ const Inicio = () => {
         <>
         {personajes != null ? (
             personajes.map(personaje => (
-                <div key={personaje.id}>
-                    <a href={`/personaje/${personaje.id}`}>{personaje.name}</a>
+                <div key={personaje.id} class="personaje-card">
+                    <a href={`/personaje/${personaje.id}`} class="personaje-link">{personaje.name}</a>
                 </div>
             ))
         ) : ('No hay personajes')}

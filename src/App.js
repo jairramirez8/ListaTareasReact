@@ -19,8 +19,8 @@ const App = () => {
   return (
     <div className="contenedor">
          <nav>
-            <a href='/'>Tasks</a>
-            <a href='/api'>API</a>
+            <a href='/' class="link">Tasks</a>
+            <a href='/api' class="link">API</a>
          </nav>
          
          <BrowserRouter>
